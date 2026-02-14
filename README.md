@@ -4,8 +4,8 @@
 
 A beautifully designed, premium Recipe Finder application built with React, Vite, and Tailwind CSS. Rasoi Magic helps you discover delicious recipes tailored to your dietary needs with a smooth, glassmorphism-inspired interface and an authentic Indian touch.
 
-![Rasoi Magic App Preview](https://via.placeholder.com/800x450.png?text=Rasoi+Magic+App+Preview) 
-*(Replace this placeholder with an actual screenshot of your app)*
+![Rasoi Magic App Preview](images/rasoi_magic_preview.png) 
+*(Replace this with your own screenshot or keep this AI-generated mockup)*
 
 ## ✨ Top Features
 
