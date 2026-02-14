@@ -6,6 +6,7 @@ import FilterSystem from './components/FilterSystem';
 import RecipeCard from './components/RecipeCard';
 import RecipeDetails from './components/RecipeDetails';
 import CategoryGrid from './components/CategoryGrid';
+import Footer from './components/Footer';
 import { searchRecipes, getRecipeDetails } from './services/api';
 
 function App() {
@@ -144,8 +145,8 @@ function App() {
           <button
             onClick={() => setShowFavorites(!showFavorites)}
             className={`inline-flex items-center px-6 py-2 rounded-full font-bold transition-all ${showFavorites
-                ? 'bg-red-500 text-white shadow-lg shadow-red-200'
-                : 'bg-white text-red-500 border-2 border-red-100 hover:bg-red-50'
+              ? 'bg-red-500 text-white shadow-lg shadow-red-200'
+              : 'bg-white text-red-500 border-2 border-red-100 hover:bg-red-50'
               }`}
           >
             <Heart className={`w-5 h-5 mr-2 ${showFavorites ? 'fill-current' : ''}`} />
@@ -238,6 +239,8 @@ function App() {
           </div>
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }
