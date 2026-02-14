@@ -7,8 +7,10 @@ const RecipeDetails = ({ recipe, isOpen, onClose, isFavorite, onToggleFavorite }
 
     const handleShare = () => {
         const text = `Check out this delicious recipe: ${recipe.title}`;
-        const url = recipe.sourceUrl || window.location.href;
-        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`;
+        const baseUrl = 'https://rasoi-magic-omega.vercel.app/';
+        // If we had routing, we'd append recipe ID. For now, just sharing the app.
+        // Better: Share app URL + Recipe Title
+        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + baseUrl)}`;
         window.open(whatsappUrl, '_blank');
     };
 
