@@ -26,11 +26,13 @@ const CategoryGrid = ({ onCategorySelect }) => {
                         whileHover={{ scale: 1.05, y: -5 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => onCategorySelect(category.name)}
-                        className={`relative overflow-hidden rounded-2xl p-4 h-24 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-all group`}
+                        className={`relative overflow-hidden rounded-2xl p-4 h-24 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl transition-all group border border-white/20`}
                     >
                         <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-90 group-hover:opacity-100 transition-opacity`} />
-                        <span className="relative z-10 text-3xl mb-1 filter drop-shadow-md">{category.icon}</span>
-                        <span className="relative z-10 text-white font-bold text-sm tracking-wide shadow-black drop-shadow-sm">
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+
+                        <span className="relative z-10 text-3xl mb-1 filter drop-shadow-md transform group-hover:scale-110 transition-transform duration-300">{category.icon}</span>
+                        <span className="relative z-10 text-white font-bold text-sm tracking-wide shadow-black drop-shadow-sm group-hover:text-white/90">
                             {category.name}
                         </span>
                     </motion.button>

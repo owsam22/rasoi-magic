@@ -122,37 +122,58 @@ function App() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Sticky Header */}
         <motion.header
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="flex flex-col md:flex-row items-center justify-between mb-16 py-6 sticky top-0 z-40 bg-[#FFFBF0]/80 backdrop-blur-md border-b border-orange-100/50 -mx-6 px-6 md:-mx-12 md:px-12"
         >
-          <div className="flex items-center justify-center mb-4">
-            <div className="p-3 bg-orange-100 rounded-full mr-3 border border-orange-200">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 text-orange-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <div className="flex items-center mb-4 md:mb-0 cursor-pointer" onClick={() => { setSearchQuery(''); handleSearch(''); }}>
+            <div className="p-2.5 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl mr-3 shadow-lg shadow-orange-500/20">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.1.2-2.2.5-3.3a9 9 0 0 0 12 10" />
               </svg>
             </div>
-            <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 font-display">
-              Rasoi Magic
-            </h1>
+            <div>
+              <h1 className="text-3xl font-bold text-slate-900 font-display tracking-tight leading-none">
+                Rasoi<span className="text-orange-600">Magic</span>
+              </h1>
+              <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">Premium Recipe Finder</span>
+            </div>
           </div>
-          <p className="text-xl text-orange-800/80 font-medium max-w-2xl mx-auto italic mb-6">
-            "The Authentic Taste of India & Beyond"
-          </p>
 
           <button
             onClick={() => setShowFavorites(!showFavorites)}
-            className={`inline-flex items-center px-6 py-2 rounded-full font-bold transition-all ${showFavorites
-              ? 'bg-red-500 text-white shadow-lg shadow-red-200'
-              : 'bg-white text-red-500 border-2 border-red-100 hover:bg-red-50'
+            className={`flex items-center px-5 py-2.5 rounded-xl font-bold transition-all duration-300 ${showFavorites
+                ? 'bg-red-500 text-white shadow-lg shadow-red-500/30 ring-2 ring-red-500 ring-offset-2'
+                : 'bg-white text-slate-700 shadow-sm border border-slate-200 hover:border-red-200 hover:text-red-500 hover:shadow-md'
               }`}
           >
             <Heart className={`w-5 h-5 mr-2 ${showFavorites ? 'fill-current' : ''}`} />
-            {showFavorites ? 'View All Recipes' : 'My Cookbook'}
+            {showFavorites ? 'Browse Recipes' : 'My Cookbook'}
+            {favorites.length > 0 && !showFavorites && (
+              <span className="ml-2 bg-red-100 text-red-600 text-xs py-0.5 px-2 rounded-full">
+                {favorites.length}
+              </span>
+            )}
           </button>
         </motion.header>
+
+        {/* Hero / Intro (Only show on Home) */}
+        {!searchQuery && !showFavorites && !loading && recipes.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-16 max-w-3xl mx-auto"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 font-display leading-tight">
+              Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">Magic</span> of Cooking
+            </h2>
+            <p className="text-xl text-slate-600 mb-10 leading-relaxed">
+              Explore thousands of authentic recipes, from quick weeknight dinners to gourmet Indian feasts. What are you craving today?
+            </p>
+          </motion.div>
+        )}
 
         {!showFavorites && (
           <>
