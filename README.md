@@ -1,18 +1,35 @@
 # 🍽️ Rasoi Magic - Premium Recipe Finder
 
-A beautifully designed, premium Recipe Finder application built with React, Vite, and Tailwind CSS. Rasoi Magic helps you discover delicious recipes tailored to your dietary needs with a smooth, glassmorphism-inspired interface.
+**Live Demo:** [https://rasoi-magic-omega.vercel.app/](https://rasoi-magic-omega.vercel.app/)
+
+A beautifully designed, premium Recipe Finder application built with React, Vite, and Tailwind CSS. Rasoi Magic helps you discover delicious recipes tailored to your dietary needs with a smooth, glassmorphism-inspired interface and an authentic Indian touch.
 
 ![Rasoi Magic App Preview](https://via.placeholder.com/800x450.png?text=Rasoi+Magic+App+Preview) 
 *(Replace this placeholder with an actual screenshot of your app)*
 
-## ✨ Features
+## ✨ Top Features
 
-- **🔍 Smart Search**: Instantly find recipes by ingredients (e.g., "chicken, lemon").
-- **🥗 Advanced Filtering**: Filter by Diet (Vegan, Keto, Gluten-Free, etc.) and Meal Type (Breakfast, Dinner, etc.).
-- **⚡ Premium UI**: Glassmorphism design, smooth animations, and responsive layout.
-- **📱 Mobile Optimized**: Full-screen recipe details and touch-friendly interface on mobile devices.
-- **⏱️ Quick Info**: See preparation time, servings, and health scores at a glance.
-- **📝 Detailed Recipes**: View full ingredients list and step-by-step cooking instructions.
+### 🍛 Authentic Indian Experience
+- **Premium Theme**: Rich mesh gradients and warm colors (Saffron, Red, Amber).
+- **Popular Categories**: Instant access to favorites like **Biryani**, **Paneer**, **Street Food**, **Sweets**, and **South Indian**.
+- **Strict Veg Toggle**: A dedicated switch to filter for **Pure Vegetarian** recipes instantly.
+
+### 💖 Personalization & Sharing
+- **My Cookbook (Favorites)**: Save your favorite recipes locally with a single click.
+- **WhatsApp Share**: Share recipes directly with friends and family via WhatsApp with the live link.
+
+### 🔍 Powerful Discovery
+- **Smart Search**: Find recipes by ingredients (e.g., "chicken, lemon").
+- **Advanced Filters**: Filter by Diet (Vegan, Keto, Gluten-Free) and Meal Type.
+- **Detailed Insights**: View preparation time, servings, health scores, and nutrition.
+
+### ⚡ Modern UI/UX
+- **Glassmorphism Design**: Frosted glass effects and smooth animations.
+- **Mobile-First**: Fully responsive with full-screen details on mobile.
+- **Sticky Header**: Easy navigation with a live favorites counter.
+- **Professional Footer**: Quick links, newsletter mock, and social integration.
+
+---
 
 ## 🛠️ Tech Stack
 
@@ -21,6 +38,8 @@ A beautifully designed, premium Recipe Finder application built with React, Vite
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
 - **API**: [Spoonacular API](https://spoonacular.com/food-api)
+
+---
 
 ## 🚀 Getting Started
 
@@ -46,14 +65,7 @@ Follow these steps to get the project running locally.
 
 3.  **Configure API Key**
     - Get a free API Key from [Spoonacular](https://spoonacular.com/food-api/console#profile).
-    - Rename the `.env.example` file to `.env`:
-      ```bash
-      # Windows
-      copy .env.example .env
-      # Mac/Linux
-      cp .env.example .env
-      ```
-    - Open `.env` and add your key:
+    - Create a `.env` file in the root directory:
       ```env
       VITE_SPOONACULAR_API_KEY=your_actual_api_key_here
       ```
@@ -63,16 +75,6 @@ Follow these steps to get the project running locally.
     npm run dev
     ```
     Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-## 📱 Mobile Experience
-
-Rasoi Magic is designed with a "Mobile-First" premium approach.
-- **Touch-Friendly**: Large touch targets for buttons and cards.
-- **Immersive Details**: Recipe details open in a full-screen view on mobile devices for better readability.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -85,3 +87,7 @@ Made with ❤️ by **[owsam22](https://github.com/owsam22)**
 - **LinkedIn**: [Samarpan](https://linkedin.com/in/samarpan22)
 
 ---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
