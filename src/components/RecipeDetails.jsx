@@ -43,14 +43,14 @@ const RecipeDetails = ({ recipe, isOpen, onClose, isFavorite, onToggleFavorite }
                     <div className="absolute top-4 right-4 z-20 flex gap-2">
                         <button
                             onClick={handleShare}
-                            className="p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-all duration-300"
+                            className="p-2 bg-white hover:bg-slate-100 rounded-full text-slate-700 shadow-lg border border-slate-100 transition-all duration-300 hover:scale-110 active:scale-95"
                             title="Share on WhatsApp"
                         >
                             <Share2 className="w-6 h-6" />
                         </button>
                         <button
                             onClick={onToggleFavorite}
-                            className="p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-all duration-300"
+                            className="p-2 bg-white hover:bg-slate-100 rounded-full text-slate-700 shadow-lg border border-slate-100 transition-all duration-300 hover:scale-110 active:scale-95"
                             title={isFavorite ? "Remove from Favorites" : "Add to Favorites"}
                         >
                             <Heart className={`w-6 h-6 ${isFavorite ? 'fill-red-500 text-red-500' : ''}`} />

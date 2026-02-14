@@ -27,7 +27,7 @@ const RecipeCard = ({ recipe, onClick, isFavorite, onToggleFavorite }) => {
                         e.stopPropagation();
                         onToggleFavorite();
                     }}
-                    className="absolute top-3 right-3 p-2.5 rounded-full bg-white/20 backdrop-blur-md hover:bg-white text-white hover:text-red-500 transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg border border-white/20"
+                    className="absolute top-3 right-3 p-2.5 rounded-full bg-white hover:bg-slate-100 text-slate-700 shadow-lg border border-slate-100 transition-all duration-300 hover:scale-110 active:scale-95"
                 >
                     <Heart className={`w-5 h-5 ${isFavorite ? 'fill-red-500 text-red-500' : ''}`} />
                 </button>
