@@ -35,8 +35,8 @@ Follow these steps to get the project running locally.
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/yourusername/culinara.git
-    cd culinara
+    git clone https://github.com/owsam22/rasoi-magic.git
+    cd rasoi-magic
     ```
 
 2.  **Install dependencies**
@@ -76,4 +76,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with ❤️ by [Your Name]
+## 📬 Connect with me
+
+Made with ❤️ by **[owsam22](https://github.com/owsam22)**
+
+- **GitHub**: [owsam22](https://github.com/owsam22)
+- **Instagram**: [@owsam22](https://instagram.com/owsam22)
+- **LinkedIn**: [Samarpan](https://linkedin.com/in/samarpan22)
+
+---
